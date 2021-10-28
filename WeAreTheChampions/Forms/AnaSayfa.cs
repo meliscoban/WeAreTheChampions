@@ -55,12 +55,6 @@ namespace WeAreTheChampions
         {
             dgvKarsilasmalarKarsilasmalar.AutoGenerateColumns = false;
 
-            cboKarsilasmalarTakimlar.DisplayMember = "TeamName";
-            cboKarsilasmalarTakimlar.ValueMember = "Id";
-            var takimlarList = context.Teams.Select(x => new TeamDTO() { Id = x.Id, TeamName = x.TeamName }).ToList();
-            takimlarList.Insert(0, new TeamDTO() { TeamName = "Bütün Takımlar" });
-            cboKarsilasmalarTakimlar.DataSource = takimlarList;
-
             dgvKarsilasmalarKarsilasmalar.DataSource = context.Matches.Select(x => new MatchDTO() { Id = x.Id, MatchTime = x.MatchTime, Team1Name = x.Team1.TeamName, Team2Name = x.Team2.TeamName, Score1 = x.Score1, Score2 = x.Score2, Result = x.Result }).ToList();
         }
         

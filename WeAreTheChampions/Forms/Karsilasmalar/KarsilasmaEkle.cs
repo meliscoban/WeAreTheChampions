@@ -36,10 +36,6 @@ namespace WeAreTheChampions
             {
                 MessageBox.Show("Lütfen 1.Takımı ve 2.Takımı farklı takımlar giriniz.");
             }
-            else if (context.Matches.Any(x => x.Team1Id == (int)cboKarsilasmaEkleTakim1.SelectedValue && x.Team2Id == (int)cboKarsilasmaEkleTakim2.SelectedValue && x.MatchTime == dtpKarsilasmaEkleTarih.Value && x.Score1 == nudKarsilasmaEkleSkor1.Value && x.Score2 == nudKarsilasmaEkleSkor2.Value))
-            {
-                MessageBox.Show("Bu karşılaşma daha önce eklenmiştir.");
-            }
             else
             {
                 TeamDTO teamDTO1 = (TeamDTO)cboKarsilasmaEkleTakim1.SelectedItem;
@@ -54,9 +50,7 @@ namespace WeAreTheChampions
                     Team1Id = (int)cboKarsilasmaEkleTakim1.SelectedValue,
                     Team1 = team1,
                     Team2Id = (int)cboKarsilasmaEkleTakim2.SelectedValue,
-                    Team2 = team2,
-                    Score1 = (int)nudKarsilasmaEkleSkor1.Value,
-                    Score2 = (int)nudKarsilasmaEkleSkor2.Value
+                    Team2 = team2
                 });
                 MessageBox.Show("Karşılaşma başarıyla eklenmiştir.");
                 context.SaveChanges();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeAreTheChampions.Models;
+using WeAreTheChampions.Utils;
 
 namespace WeAreTheChampions
 {
@@ -43,7 +44,22 @@ namespace WeAreTheChampions
                 match.Score2 = (int)nudKarsilasmaDuzenleSkor2.Value;
                 match.Team1Id = (int)cboKarsilasmaDuzenleTakim1.SelectedValue;
                 match.Team2Id = (int)cboKarsilasmaDuzenleTakim2.SelectedValue;
+
+                if ((int)nudKarsilasmaDuzenleSkor1.Value > (int)nudKarsilasmaDuzenleSkor2.Value)
+                {
+                    match.Result = EnumClass.Result.Team1Kazandi;
+                }
+                else if ((int)nudKarsilasmaDuzenleSkor1.Value < (int)nudKarsilasmaDuzenleSkor2.Value)
+                {
+                    match.Result = EnumClass.Result.Team2Kazandi;
+                }
+                else if ((int)nudKarsilasmaDuzenleSkor1.Value == (int)nudKarsilasmaDuzenleSkor2.Value)
+                {
+                    match.Result = EnumClass.Result.Berabere;
+                }
+
                 MessageBox.Show("Karşılaşma başarıyla güncellenmiştir.");
+                
                 context.SaveChanges();
                 Close();
             }

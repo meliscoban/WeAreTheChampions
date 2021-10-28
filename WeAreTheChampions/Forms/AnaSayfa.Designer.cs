@@ -37,8 +37,6 @@ namespace WeAreTheChampions
             this.tabAnaSayfa = new System.Windows.Forms.TabControl();
             this.tabTakimlar = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboKarsilasmalarTakimlar = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnKarsilasmalarKarsilasmaSil = new System.Windows.Forms.Button();
             this.btnKarsilasmalarKarsilasmaDuzenle = new System.Windows.Forms.Button();
             this.btnKarsilasmalarKarsilasmaEkle = new System.Windows.Forms.Button();
@@ -113,8 +111,6 @@ namespace WeAreTheChampions
             // 
             this.tabTakimlar.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.tabTakimlar.Controls.Add(this.label6);
-            this.tabTakimlar.Controls.Add(this.cboKarsilasmalarTakimlar);
-            this.tabTakimlar.Controls.Add(this.label7);
             this.tabTakimlar.Controls.Add(this.btnKarsilasmalarKarsilasmaSil);
             this.tabTakimlar.Controls.Add(this.btnKarsilasmalarKarsilasmaDuzenle);
             this.tabTakimlar.Controls.Add(this.btnKarsilasmalarKarsilasmaEkle);
@@ -130,32 +126,12 @@ namespace WeAreTheChampions
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 115);
+            this.label6.Location = new System.Drawing.Point(2, 31);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 19);
             this.label6.TabIndex = 15;
             this.label6.Text = "Karşılaşmalar";
-            // 
-            // cboKarsilasmalarTakimlar
-            // 
-            this.cboKarsilasmalarTakimlar.FormattingEnabled = true;
-            this.cboKarsilasmalarTakimlar.Location = new System.Drawing.Point(7, 53);
-            this.cboKarsilasmalarTakimlar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.cboKarsilasmalarTakimlar.Name = "cboKarsilasmalarTakimlar";
-            this.cboKarsilasmalarTakimlar.Size = new System.Drawing.Size(333, 27);
-            this.cboKarsilasmalarTakimlar.TabIndex = 14;
-            this.cboKarsilasmalarTakimlar.SelectedIndexChanged += new System.EventHandler(this.cboKarsilasmalarTakimlar_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 31);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 19);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Takımlar";
             // 
             // btnKarsilasmalarKarsilasmaSil
             // 
@@ -226,14 +202,14 @@ namespace WeAreTheChampions
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKarsilasmalarKarsilasmalar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvKarsilasmalarKarsilasmalar.Location = new System.Drawing.Point(7, 138);
+            this.dgvKarsilasmalarKarsilasmalar.Location = new System.Drawing.Point(7, 51);
             this.dgvKarsilasmalarKarsilasmalar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgvKarsilasmalarKarsilasmalar.MultiSelect = false;
             this.dgvKarsilasmalarKarsilasmalar.Name = "dgvKarsilasmalarKarsilasmalar";
             this.dgvKarsilasmalarKarsilasmalar.ReadOnly = true;
             this.dgvKarsilasmalarKarsilasmalar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvKarsilasmalarKarsilasmalar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKarsilasmalarKarsilasmalar.Size = new System.Drawing.Size(1153, 529);
+            this.dgvKarsilasmalarKarsilasmalar.Size = new System.Drawing.Size(1153, 616);
             this.dgvKarsilasmalarKarsilasmalar.TabIndex = 0;
             // 
             // IdKarşılaşma
@@ -299,7 +275,7 @@ namespace WeAreTheChampions
             this.tabOyuncular.Margin = new System.Windows.Forms.Padding(4);
             this.tabOyuncular.Name = "tabOyuncular";
             this.tabOyuncular.Padding = new System.Windows.Forms.Padding(4);
-            this.tabOyuncular.Size = new System.Drawing.Size(1166, 767);
+            this.tabOyuncular.Size = new System.Drawing.Size(1172, 767);
             this.tabOyuncular.TabIndex = 2;
             this.tabOyuncular.Text = "Oyuncular";
             // 
@@ -587,7 +563,7 @@ namespace WeAreTheChampions
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabPage2.Size = new System.Drawing.Size(1166, 767);
+            this.tabPage2.Size = new System.Drawing.Size(1172, 767);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Takımlar";
             // 
@@ -653,7 +629,7 @@ namespace WeAreTheChampions
             this.dgvTakimlarTakimlar.ReadOnly = true;
             this.dgvTakimlarTakimlar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvTakimlarTakimlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTakimlarTakimlar.Size = new System.Drawing.Size(1148, 616);
+            this.dgvTakimlarTakimlar.Size = new System.Drawing.Size(1153, 616);
             this.dgvTakimlarTakimlar.TabIndex = 16;
             // 
             // IdTakım
@@ -705,7 +681,7 @@ namespace WeAreTheChampions
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1206, 826);
+            this.ClientSize = new System.Drawing.Size(1203, 826);
             this.Controls.Add(this.tabAnaSayfa);
             this.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -756,8 +732,6 @@ namespace WeAreTheChampions
         private System.Windows.Forms.Button btnRenklerRenkEkle;
         private System.Windows.Forms.DataGridView dgvRenklerRenkler;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboKarsilasmalarTakimlar;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvTakimlarTakimlar;
