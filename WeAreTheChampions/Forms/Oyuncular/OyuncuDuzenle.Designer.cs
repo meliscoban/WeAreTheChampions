@@ -34,12 +34,13 @@ namespace WeAreTheChampions.Forms.Oyuncular
             this.txtOyuncuDuzenleOyuncuAd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboOyuncuDuzenleTakimAd = new System.Windows.Forms.ComboBox();
+            this.chkOyuncuDuzenleTakim = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 90);
+            this.label2.Location = new System.Drawing.Point(12, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 19);
             this.label2.TabIndex = 29;
@@ -48,7 +49,7 @@ namespace WeAreTheChampions.Forms.Oyuncular
             // btnOyuncuDuzenleOyuncuEkle
             // 
             this.btnOyuncuDuzenleOyuncuEkle.BackColor = System.Drawing.Color.White;
-            this.btnOyuncuDuzenleOyuncuEkle.Location = new System.Drawing.Point(16, 183);
+            this.btnOyuncuDuzenleOyuncuEkle.Location = new System.Drawing.Point(16, 232);
             this.btnOyuncuDuzenleOyuncuEkle.Name = "btnOyuncuDuzenleOyuncuEkle";
             this.btnOyuncuDuzenleOyuncuEkle.Size = new System.Drawing.Size(397, 37);
             this.btnOyuncuDuzenleOyuncuEkle.TabIndex = 28;
@@ -74,18 +75,31 @@ namespace WeAreTheChampions.Forms.Oyuncular
             // 
             // cboOyuncuDuzenleTakimAd
             // 
+            this.cboOyuncuDuzenleTakimAd.Enabled = false;
             this.cboOyuncuDuzenleTakimAd.FormattingEnabled = true;
-            this.cboOyuncuDuzenleTakimAd.Location = new System.Drawing.Point(16, 112);
+            this.cboOyuncuDuzenleTakimAd.Location = new System.Drawing.Point(16, 174);
             this.cboOyuncuDuzenleTakimAd.Name = "cboOyuncuDuzenleTakimAd";
             this.cboOyuncuDuzenleTakimAd.Size = new System.Drawing.Size(397, 27);
             this.cboOyuncuDuzenleTakimAd.TabIndex = 31;
+            // 
+            // chkOyuncuDuzenleTakim
+            // 
+            this.chkOyuncuDuzenleTakim.AutoSize = true;
+            this.chkOyuncuDuzenleTakim.Location = new System.Drawing.Point(16, 99);
+            this.chkOyuncuDuzenleTakim.Name = "chkOyuncuDuzenleTakim";
+            this.chkOyuncuDuzenleTakim.Size = new System.Drawing.Size(179, 23);
+            this.chkOyuncuDuzenleTakim.TabIndex = 32;
+            this.chkOyuncuDuzenleTakim.Text = "Oyuncunun takımı var";
+            this.chkOyuncuDuzenleTakim.UseVisualStyleBackColor = true;
+            this.chkOyuncuDuzenleTakim.CheckedChanged += new System.EventHandler(this.chkOyuncuDuzenleTakim_CheckedChanged);
             // 
             // OyuncuDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
-            this.ClientSize = new System.Drawing.Size(433, 238);
+            this.ClientSize = new System.Drawing.Size(433, 281);
+            this.Controls.Add(this.chkOyuncuDuzenleTakim);
             this.Controls.Add(this.cboOyuncuDuzenleTakimAd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOyuncuDuzenleOyuncuEkle);
@@ -109,5 +123,6 @@ namespace WeAreTheChampions.Forms.Oyuncular
         private System.Windows.Forms.TextBox txtOyuncuDuzenleOyuncuAd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboOyuncuDuzenleTakimAd;
+        private System.Windows.Forms.CheckBox chkOyuncuDuzenleTakim;
     }
 }

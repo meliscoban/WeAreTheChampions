@@ -33,23 +33,6 @@ namespace WeAreTheChampions
         }
 
         #region Karşılaşmalar
-        private void cboKarsilasmalarTakimlar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (cboKarsilasmalarTakimlar.SelectedIndex == -1)
-            //{
-            //    dgvKarsilasmalarKarsilasmalar.DataSource = null;
-            //}
-            //else if (cboKarsilasmalarTakimlar.SelectedIndex == 0)
-            //{
-            //    dgvKarsilasmalarKarsilasmalar.DataSource = context.Matches.ToList();
-            //}
-            //else
-            //{
-            //    TeamDTO teamDTO = (TeamDTO)cboKarsilasmalarTakimlar.SelectedItem;
-            //    Team team = context.Teams.FirstOrDefault(x => x.Id.Equals(teamDTO.Id));
-            //    dgvKarsilasmalarKarsilasmalar.DataSource = team.Matches.ToList();
-            //}
-        }
         
         private void KarsilasmalariListele()
         {
@@ -107,7 +90,7 @@ namespace WeAreTheChampions
             }
             else if (cboOyuncularTakimlar.SelectedIndex == 0)
             {
-                dgvOyuncularOyuncular.DataSource = context.Players.ToList();
+                dgvOyuncularOyuncular.DataSource = context.Players.Select(x => new PlayerDTO() { Id = x.Id, TeamId = x.TeamId, PlayerName = x.PlayerName, TeamName = x.Team.TeamName }).ToList();
             }
             else
             {
@@ -169,33 +152,10 @@ namespace WeAreTheChampions
         #endregion
 
         #region Renkler
-        private void cboRenklerTakimlar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (cboRenklerTakimlar.SelectedIndex == -1)
-            //{
-            //    dgvRenklerRenkler.DataSource = null;
-            //}
-            //else if (cboRenklerTakimlar.SelectedIndex == 0)
-            //{
-            //    dgvRenklerRenkler.DataSource = context.Colors.ToList();
-            //}
-            //else
-            //{
-            //    TeamDTO teamDTO = (TeamDTO)cboRenklerTakimlar.SelectedItem;
-            //    Team team = context.Teams.FirstOrDefault(x => x.Id.Equals(teamDTO.Id));
-            //    dgvRenklerRenkler.DataSource = team.Colors.ToList();
-            //}
-        }
 
         private void RenkleriListele()
         {
             dgvRenklerRenkler.AutoGenerateColumns = false;
-
-            cboRenklerTakimlar.DisplayMember = "TeamName";
-            cboRenklerTakimlar.ValueMember = "Id";
-            var takimlarList = context.Teams.Select(x => new TeamDTO() { Id = x.Id, TeamName = x.TeamName }).ToList();
-            takimlarList.Insert(0, new TeamDTO() { TeamName = "Bütün Takımlar" });
-            cboRenklerTakimlar.DataSource = takimlarList;
 
             dgvRenklerRenkler.DataSource = context.Colors.Select(x => new ColorDTO() { Id = x.Id, ColorName = x.ColorName, Red = x.Red, Green = x.Green, Blue = x.Blue }).ToList();
         }
@@ -278,8 +238,8 @@ namespace WeAreTheChampions
 
                 context.Teams.Remove(team);
                 context.SaveChanges();
-                
                 MessageBox.Show("Takım başarıyla silinmiştir.");
+                KarsilasmalariListele();
                 TakimlariListele();
             }
         }

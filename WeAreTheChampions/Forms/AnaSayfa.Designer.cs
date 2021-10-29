@@ -29,11 +29,11 @@ namespace WeAreTheChampions
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabAnaSayfa = new System.Windows.Forms.TabControl();
             this.tabTakimlar = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,8 +61,6 @@ namespace WeAreTheChampions
             this.OyuncuTakım = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboRenklerTakimlar = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnRenklerRenkSil = new System.Windows.Forms.Button();
             this.btnRenklerRenkDuzenle = new System.Windows.Forms.Button();
             this.btnRenklerRenkEkle = new System.Windows.Forms.Button();
@@ -177,14 +175,14 @@ namespace WeAreTheChampions
             this.dgvKarsilasmalarKarsilasmalar.BackgroundColor = System.Drawing.Color.White;
             this.dgvKarsilasmalarKarsilasmalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKarsilasmalarKarsilasmalar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKarsilasmalarKarsilasmalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKarsilasmalarKarsilasmalar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvKarsilasmalarKarsilasmalar.ColumnHeadersHeight = 35;
             this.dgvKarsilasmalarKarsilasmalar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdKarşılaşma,
@@ -194,14 +192,14 @@ namespace WeAreTheChampions
             this.Takım2,
             this.Skor,
             this.Sonuç});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKarsilasmalarKarsilasmalar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKarsilasmalarKarsilasmalar.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvKarsilasmalarKarsilasmalar.Location = new System.Drawing.Point(7, 51);
             this.dgvKarsilasmalarKarsilasmalar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgvKarsilasmalarKarsilasmalar.MultiSelect = false;
@@ -358,14 +356,14 @@ namespace WeAreTheChampions
             this.IdOyuncu,
             this.Oyuncu,
             this.OyuncuTakım});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOyuncularOyuncular.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOyuncularOyuncular.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvOyuncularOyuncular.Location = new System.Drawing.Point(7, 138);
             this.dgvOyuncularOyuncular.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgvOyuncularOyuncular.MultiSelect = false;
@@ -401,8 +399,6 @@ namespace WeAreTheChampions
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightBlue;
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.cboRenklerTakimlar);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.btnRenklerRenkSil);
             this.tabPage1.Controls.Add(this.btnRenklerRenkDuzenle);
             this.tabPage1.Controls.Add(this.btnRenklerRenkEkle);
@@ -418,32 +414,12 @@ namespace WeAreTheChampions
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 115);
+            this.label3.Location = new System.Drawing.Point(2, 31);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "Renkler";
-            // 
-            // cboRenklerTakimlar
-            // 
-            this.cboRenklerTakimlar.FormattingEnabled = true;
-            this.cboRenklerTakimlar.Location = new System.Drawing.Point(7, 53);
-            this.cboRenklerTakimlar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.cboRenklerTakimlar.Name = "cboRenklerTakimlar";
-            this.cboRenklerTakimlar.Size = new System.Drawing.Size(333, 27);
-            this.cboRenklerTakimlar.TabIndex = 18;
-            this.cboRenklerTakimlar.SelectedIndexChanged += new System.EventHandler(this.cboRenklerTakimlar_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 19);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Takımlar";
             // 
             // btnRenklerRenkSil
             // 
@@ -496,22 +472,22 @@ namespace WeAreTheChampions
             this.Kırmızı,
             this.Yeşil,
             this.Mavi});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRenklerRenkler.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvRenklerRenkler.Location = new System.Drawing.Point(7, 138);
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRenklerRenkler.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvRenklerRenkler.Location = new System.Drawing.Point(7, 51);
             this.dgvRenklerRenkler.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgvRenklerRenkler.MultiSelect = false;
             this.dgvRenklerRenkler.Name = "dgvRenklerRenkler";
             this.dgvRenklerRenkler.ReadOnly = true;
             this.dgvRenklerRenkler.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRenklerRenkler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRenklerRenkler.Size = new System.Drawing.Size(1155, 529);
+            this.dgvRenklerRenkler.Size = new System.Drawing.Size(1155, 616);
             this.dgvRenklerRenkler.TabIndex = 13;
             // 
             // IdRenk
@@ -614,14 +590,14 @@ namespace WeAreTheChampions
             this.IdTakım,
             this.Takım,
             this.Renkler});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTakimlarTakimlar.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTakimlarTakimlar.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvTakimlarTakimlar.Location = new System.Drawing.Point(7, 51);
             this.dgvTakimlarTakimlar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dgvTakimlarTakimlar.MultiSelect = false;
@@ -725,8 +701,6 @@ namespace WeAreTheChampions
         private System.Windows.Forms.Button btnOyuncularOyuncuEkle;
         private System.Windows.Forms.DataGridView dgvOyuncularOyuncular;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboRenklerTakimlar;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRenklerRenkSil;
         private System.Windows.Forms.Button btnRenklerRenkDuzenle;
         private System.Windows.Forms.Button btnRenklerRenkEkle;

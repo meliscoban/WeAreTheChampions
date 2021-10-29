@@ -29,23 +29,40 @@ namespace WeAreTheChampions.Forms.Oyuncular
             cboOyuncuDuzenleTakimAd.DisplayMember = "TeamName";
             cboOyuncuDuzenleTakimAd.ValueMember = "Id";
             cboOyuncuDuzenleTakimAd.DataSource = context.Teams.Select(x => new TeamDTO() { Id = x.Id, TeamName = x.TeamName }).ToList();
+            cboOyuncuDuzenleTakimAd.Enabled = false;
         }
 
         private void btnOyuncuDuzenleOyuncuEkle_Click(object sender, EventArgs e)
         {
-            if (context.Players.Any(x => x.PlayerName == txtOyuncuDuzenleOyuncuAd.Text && x.Team.TeamName == cboOyuncuDuzenleTakimAd.Text))
+            Player player = context.Players.FirstOrDefault(x => x.Id.Equals(playerDTO.Id));
+
+            if (chkOyuncuDuzenleTakim.Checked == true)
             {
-                MessageBox.Show("Bu karşılaşma daha önce eklenmiştir.");
+                player.PlayerName = txtOyuncuDuzenleOyuncuAd.Text;
+                player.TeamId = (int)cboOyuncuDuzenleTakimAd.SelectedValue;
+                MessageBox.Show("Oyuncu başarıyla güncellenmiştir.");
+                context.SaveChanges();
+                Close();
             }
             else
             {
-                Player player = context.Players.FirstOrDefault(x => x.Id.Equals(playerDTO.Id));
-
                 player.PlayerName = txtOyuncuDuzenleOyuncuAd.Text;
-                player.Team.TeamName = cboOyuncuDuzenleTakimAd.Text;
-                MessageBox.Show("Karşılaşma başarıyla güncellenmiştir.");
+                player.TeamId = null;
+                MessageBox.Show("Oyuncu başarıyla güncellenmiştir.");
                 context.SaveChanges();
                 Close();
+            }
+        }
+
+        private void chkOyuncuDuzenleTakim_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOyuncuDuzenleTakim.Checked == true)
+            {
+                cboOyuncuDuzenleTakimAd.Enabled = true;
+            }
+            else if (chkOyuncuDuzenleTakim.Checked == false)
+            {
+                cboOyuncuDuzenleTakimAd.Enabled = false;
             }
         }
     }

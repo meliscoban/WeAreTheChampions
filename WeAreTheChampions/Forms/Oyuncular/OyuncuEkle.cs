@@ -27,15 +27,12 @@ namespace WeAreTheChampions.Forms.Oyuncular
             cboOyuncuEkleTakimAd.DisplayMember = "TeamName";
             cboOyuncuEkleTakimAd.ValueMember = "Id";
             cboOyuncuEkleTakimAd.DataSource = context.Teams.Select(x => new TeamDTO() { Id = x.Id, TeamName = x.TeamName }).ToList();
+            cboOyuncuEkleTakimAd.Enabled = false;
         }
 
         private void btnOyuncuEkleOyuncuEkle_Click(object sender, EventArgs e)
         {
-            if (context.Players.Any(x => x.PlayerName == txtOyuncuEkleOyuncuAd.Text && x.TeamId == (int)cboOyuncuEkleTakimAd.SelectedValue))
-            {
-                MessageBox.Show("Bu oyuncu daha önce eklenmiştir.");
-            }
-            else
+            if (chkOyuncuEkleTakim.Checked == true)
             {
                 context.Players.Add(new Player()
                 {
@@ -44,6 +41,27 @@ namespace WeAreTheChampions.Forms.Oyuncular
                 });
                 context.SaveChanges();
                 Close();
+            }
+            else
+            {
+                context.Players.Add(new Player()
+                {
+                    PlayerName = txtOyuncuEkleOyuncuAd.Text,
+                });
+                context.SaveChanges();
+                Close();
+            }
+        }
+
+        private void chkOyuncuEkleTakim_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOyuncuEkleTakim.Checked == true)
+            {
+                cboOyuncuEkleTakimAd.Enabled = true;
+            }
+            else if (chkOyuncuEkleTakim.Checked == false)
+            {
+                cboOyuncuEkleTakimAd.Enabled = false;
             }
         }
     }

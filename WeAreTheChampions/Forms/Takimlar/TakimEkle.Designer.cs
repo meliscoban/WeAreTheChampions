@@ -36,8 +36,11 @@ namespace WeAreTheChampions.Forms.Takimlar
             this.label2 = new System.Windows.Forms.Label();
             this.cboTakimEkleTakimRenk = new System.Windows.Forms.ComboBox();
             this.btnTakimEkleTakimEkle = new System.Windows.Forms.Button();
-            this.lstTakimEkleTakimRenkler = new System.Windows.Forms.ListBox();
             this.btnTakimEkleTakimRenkEkle = new System.Windows.Forms.Button();
+            this.dgvTakimEkleTakimRenkler = new System.Windows.Forms.DataGridView();
+            this.chkTakimEkleRenk = new System.Windows.Forms.CheckBox();
+            this.cklTakimEkleRenkler = new System.Windows.Forms.CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTakimEkleTakimRenkler)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,15 +94,6 @@ namespace WeAreTheChampions.Forms.Takimlar
             this.btnTakimEkleTakimEkle.UseVisualStyleBackColor = false;
             this.btnTakimEkleTakimEkle.Click += new System.EventHandler(this.btnTakimEkleTakimEkle_Click);
             // 
-            // lstTakimEkleTakimRenkler
-            // 
-            this.lstTakimEkleTakimRenkler.FormattingEnabled = true;
-            this.lstTakimEkleTakimRenkler.ItemHeight = 19;
-            this.lstTakimEkleTakimRenkler.Location = new System.Drawing.Point(14, 218);
-            this.lstTakimEkleTakimRenkler.Name = "lstTakimEkleTakimRenkler";
-            this.lstTakimEkleTakimRenkler.Size = new System.Drawing.Size(364, 118);
-            this.lstTakimEkleTakimRenkler.TabIndex = 10;
-            // 
             // btnTakimEkleTakimRenkEkle
             // 
             this.btnTakimEkleTakimRenkEkle.BackColor = System.Drawing.Color.White;
@@ -111,14 +105,43 @@ namespace WeAreTheChampions.Forms.Takimlar
             this.btnTakimEkleTakimRenkEkle.UseVisualStyleBackColor = false;
             this.btnTakimEkleTakimRenkEkle.Click += new System.EventHandler(this.btnTakimEkleTakimRenkEkle_Click);
             // 
+            // dgvTakimEkleTakimRenkler
+            // 
+            this.dgvTakimEkleTakimRenkler.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTakimEkleTakimRenkler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTakimEkleTakimRenkler.Location = new System.Drawing.Point(16, 226);
+            this.dgvTakimEkleTakimRenkler.Name = "dgvTakimEkleTakimRenkler";
+            this.dgvTakimEkleTakimRenkler.Size = new System.Drawing.Size(362, 150);
+            this.dgvTakimEkleTakimRenkler.TabIndex = 12;
+            // 
+            // chkTakimEkleRenk
+            // 
+            this.chkTakimEkleRenk.AutoSize = true;
+            this.chkTakimEkleRenk.Location = new System.Drawing.Point(16, 106);
+            this.chkTakimEkleRenk.Name = "chkTakimEkleRenk";
+            this.chkTakimEkleRenk.Size = new System.Drawing.Size(99, 23);
+            this.chkTakimEkleRenk.TabIndex = 13;
+            this.chkTakimEkleRenk.Text = "checkBox1";
+            this.chkTakimEkleRenk.UseVisualStyleBackColor = true;
+            // 
+            // cklTakimEkleRenkler
+            // 
+            this.cklTakimEkleRenkler.FormattingEnabled = true;
+            this.cklTakimEkleRenkler.Location = new System.Drawing.Point(163, 298);
+            this.cklTakimEkleRenkler.Name = "cklTakimEkleRenkler";
+            this.cklTakimEkleRenkler.Size = new System.Drawing.Size(183, 180);
+            this.cklTakimEkleRenkler.TabIndex = 14;
+            // 
             // TakimEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(405, 477);
+            this.Controls.Add(this.cklTakimEkleRenkler);
+            this.Controls.Add(this.chkTakimEkleRenk);
+            this.Controls.Add(this.dgvTakimEkleTakimRenkler);
             this.Controls.Add(this.btnTakimEkleTakimRenkEkle);
-            this.Controls.Add(this.lstTakimEkleTakimRenkler);
             this.Controls.Add(this.btnTakimEkleTakimEkle);
             this.Controls.Add(this.cboTakimEkleTakimRenk);
             this.Controls.Add(this.label2);
@@ -131,6 +154,7 @@ namespace WeAreTheChampions.Forms.Takimlar
             this.Name = "TakimEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TakimEkle";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTakimEkleTakimRenkler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +168,9 @@ namespace WeAreTheChampions.Forms.Takimlar
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboTakimEkleTakimRenk;
         private System.Windows.Forms.Button btnTakimEkleTakimEkle;
-        private System.Windows.Forms.ListBox lstTakimEkleTakimRenkler;
         private System.Windows.Forms.Button btnTakimEkleTakimRenkEkle;
+        private System.Windows.Forms.DataGridView dgvTakimEkleTakimRenkler;
+        private System.Windows.Forms.CheckBox chkTakimEkleRenk;
+        private System.Windows.Forms.CheckedListBox cklTakimEkleRenkler;
     }
 }
