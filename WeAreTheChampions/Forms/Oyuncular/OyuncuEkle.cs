@@ -39,6 +39,7 @@ namespace WeAreTheChampions.Forms.Oyuncular
                     PlayerName = txtOyuncuEkleOyuncuAd.Text,
                     TeamId = (int)cboOyuncuEkleTakimAd.SelectedValue
                 });
+                MessageBox.Show("Oyuncu başarıyla eklenmiştir.");
                 context.SaveChanges();
                 Close();
             }
@@ -48,6 +49,7 @@ namespace WeAreTheChampions.Forms.Oyuncular
                 {
                     PlayerName = txtOyuncuEkleOyuncuAd.Text,
                 });
+                MessageBox.Show("Oyuncu başarıyla eklenmiştir.");
                 context.SaveChanges();
                 Close();
             }

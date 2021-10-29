@@ -78,7 +78,6 @@ namespace WeAreTheChampions
             this.IdTakım = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Takım = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Renkler = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTakimlarTakimOyunculari = new System.Windows.Forms.Button();
             this.btnTakimlarTakimSil = new System.Windows.Forms.Button();
             this.tabAnaSayfa.SuspendLayout();
             this.tabTakimlar.SuspendLayout();
@@ -532,7 +531,6 @@ namespace WeAreTheChampions
             this.tabPage2.Controls.Add(this.btnTakimlarTakimEkle);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.dgvTakimlarTakimlar);
-            this.tabPage2.Controls.Add(this.btnTakimlarTakimOyunculari);
             this.tabPage2.Controls.Add(this.btnTakimlarTakimSil);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -546,7 +544,7 @@ namespace WeAreTheChampions
             // btnTakimlarTakimDuzenle
             // 
             this.btnTakimlarTakimDuzenle.BackColor = System.Drawing.Color.White;
-            this.btnTakimlarTakimDuzenle.Location = new System.Drawing.Point(30, 693);
+            this.btnTakimlarTakimDuzenle.Location = new System.Drawing.Point(178, 693);
             this.btnTakimlarTakimDuzenle.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTakimlarTakimDuzenle.Name = "btnTakimlarTakimDuzenle";
             this.btnTakimlarTakimDuzenle.Size = new System.Drawing.Size(214, 51);
@@ -558,7 +556,7 @@ namespace WeAreTheChampions
             // btnTakimlarTakimEkle
             // 
             this.btnTakimlarTakimEkle.BackColor = System.Drawing.Color.White;
-            this.btnTakimlarTakimEkle.Location = new System.Drawing.Point(328, 693);
+            this.btnTakimlarTakimEkle.Location = new System.Drawing.Point(476, 693);
             this.btnTakimlarTakimEkle.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTakimlarTakimEkle.Name = "btnTakimlarTakimEkle";
             this.btnTakimlarTakimEkle.Size = new System.Drawing.Size(214, 51);
@@ -628,22 +626,10 @@ namespace WeAreTheChampions
             this.Renkler.Name = "Renkler";
             this.Renkler.ReadOnly = true;
             // 
-            // btnTakimlarTakimOyunculari
-            // 
-            this.btnTakimlarTakimOyunculari.BackColor = System.Drawing.Color.White;
-            this.btnTakimlarTakimOyunculari.Location = new System.Drawing.Point(923, 693);
-            this.btnTakimlarTakimOyunculari.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnTakimlarTakimOyunculari.Name = "btnTakimlarTakimOyunculari";
-            this.btnTakimlarTakimOyunculari.Size = new System.Drawing.Size(214, 51);
-            this.btnTakimlarTakimOyunculari.TabIndex = 15;
-            this.btnTakimlarTakimOyunculari.Text = "Takım Oyuncuları";
-            this.btnTakimlarTakimOyunculari.UseVisualStyleBackColor = false;
-            this.btnTakimlarTakimOyunculari.Click += new System.EventHandler(this.btnTakimlarTakimOyunculari_Click);
-            // 
             // btnTakimlarTakimSil
             // 
             this.btnTakimlarTakimSil.BackColor = System.Drawing.Color.White;
-            this.btnTakimlarTakimSil.Location = new System.Drawing.Point(625, 693);
+            this.btnTakimlarTakimSil.Location = new System.Drawing.Point(774, 693);
             this.btnTakimlarTakimSil.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTakimlarTakimSil.Name = "btnTakimlarTakimSil";
             this.btnTakimlarTakimSil.Size = new System.Drawing.Size(214, 51);
@@ -709,7 +695,6 @@ namespace WeAreTheChampions
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvTakimlarTakimlar;
-        private System.Windows.Forms.Button btnTakimlarTakimOyunculari;
         private System.Windows.Forms.Button btnTakimlarTakimSil;
         private System.Windows.Forms.Button btnTakimlarTakimDuzenle;
         private System.Windows.Forms.Button btnTakimlarTakimEkle;

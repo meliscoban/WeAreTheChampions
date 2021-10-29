@@ -243,18 +243,6 @@ namespace WeAreTheChampions
                 TakimlariListele();
             }
         }
-
-        private void btnTakimlarTakimOyunculari_Click(object sender, EventArgs e)
-        {
-            if (dgvTakimlarTakimlar.SelectedRows.Count == 1)
-            {
-                FormOlustur(EnumClass.Form.TakimOyunculari);
-            }
-            else
-            {
-                MessageBox.Show("Lütfen oyuncularını görmek istediğiniz takımı seçiniz.");
-            }
-        }
         #endregion
         
         private void FormOlustur(EnumClass.Form formEnum)
@@ -284,14 +272,11 @@ namespace WeAreTheChampions
                     form = new RenkEkle(context);
                     break;
                 case EnumClass.Form.TakimDuzenle:
-                    TeamDTO teamDTO = (TeamDTO)dgvKarsilasmalarKarsilasmalar.SelectedRows[0].DataBoundItem;
+                    TeamDTO teamDTO = (TeamDTO)dgvTakimlarTakimlar.SelectedRows[0].DataBoundItem;
                     form = new TakimDuzenle(context, teamDTO);
                     break;
-                case EnumClass.Form.TakimEkle:
+                default:
                     form = new TakimEkle(context);
-                    break;
-                default: 
-                    form = new TakimOyunculari(context);
                     break;
             }
             form.ShowDialog();

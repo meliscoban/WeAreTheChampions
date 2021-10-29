@@ -36,6 +36,7 @@ namespace WeAreTheChampions.Forms.Renkler
                     Green = (int)nudRenkEkleYesil.Value,
                     Blue = (int)nudRenkEkleMavi.Value,
                 });
+                MessageBox.Show("Renk başarıyla eklenmiştir.");
                 context.SaveChanges();
                 Close();
             }

@@ -17,8 +17,7 @@ namespace WeAreTheChampions.Utils
            RenkDuzenle,
            RenkEkle,
            TakimDuzenle,
-           TakimEkle,
-           TakimOyunculari
+           TakimEkle
         };
 
         public enum Result

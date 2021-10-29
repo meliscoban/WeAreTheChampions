@@ -14,7 +14,7 @@ namespace WeAreTheChampions.Forms.Takimlar
     public partial class TakimEkle : Form
     {
         readonly WeAreTheChampionsContext context;
-        
+
         public TakimEkle(WeAreTheChampionsContext context)
         {
             this.context = context;
@@ -25,19 +25,9 @@ namespace WeAreTheChampions.Forms.Takimlar
 
         private void RenkleriGetir()
         {
-            //cboTakimEkleTakimRenk.DisplayMember = "ColorName";
-            //cboTakimEkleTakimRenk.ValueMember = "Id";
-            //cboTakimEkleTakimRenk.DataSource = context.Colors.Select(x => new ColorDTO() { Id = x.Id, ColorName = x.ColorName }).ToList();
-
             cklTakimEkleRenkler.DataSource = context.Colors.Select(x => new ColorDTO() { Id = x.Id, ColorName = x.ColorName }).ToList();
             cklTakimEkleRenkler.DisplayMember = "ColorName";
             cklTakimEkleRenkler.ValueMember = "Id";
-
-        }
-
-        private void btnTakimEkleTakimRenkEkle_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnTakimEkleTakimEkle_Click(object sender, EventArgs e)
@@ -48,59 +38,27 @@ namespace WeAreTheChampions.Forms.Takimlar
                 {
                     TeamName = txtTakimEkleTakimAd.Text,
                 });
+                MessageBox.Show("Takım başarıyla eklenmiştir.");
                 context.SaveChanges();
                 Close();
             }
             else
             {
-                List<ColorDTO> teamColorsList = new List<ColorDTO>();
+                List<TeamColor> teamColorList = new List<TeamColor>();
                 for (int i = 0; i < cklTakimEkleRenkler.CheckedItems.Count; i++)
                 {
-                    teamColorsList.Add((ColorDTO)cklTakimEkleRenkler.CheckedItems[i]);
-                    
-
-                    //context.TeamColors.Add(new TeamColor() { ColorId = cklTakimEkleRenkler.CheckedItems[i], Team = new Team() { TeamName = txtTakimEkleTakimAd.Text } });
+                    teamColorList.Add(new TeamColor() { ColorId = ((ColorDTO)cklTakimEkleRenkler.CheckedItems[i]).Id });
                 }
 
-
-                foreach (object itemChecked in cklTakimEkleRenkler.CheckedItems)
+                context.Teams.Add(new Team()
                 {
-                    teamColorsList.Add((ColorDTO)cklTakimEkleRenkler.SelectedValue);
-
-                }
-
-                //context.Teams.Add(new Team()
-                //{
-                //    TeamName = txtTakimEkleTakimAd.Text,
-                //    TeamColors = teamColorsList
-                //});
-
-                //context.TeamColors.Add(new TeamColor()
-                //{
-                //    TeamId = 
-                //    ColorId = teamColorsList
-                //});
-
+                    TeamName = txtTakimEkleTakimAd.Text,
+                    TeamColors = teamColorList
+                });
+                MessageBox.Show("Takım başarıyla eklenmiştir.");
                 context.SaveChanges();
                 Close();
             }
-
-            //if (context.Teams.Any(x => x.TeamName == txtTakimEkleTakimAd.Text))
-            //{
-            //    MessageBox.Show("Bu takım daha önce eklenmiştir.");
-            //}
-            //else
-            //{
-            //    context.Teams.Add(new Team()
-            //    {
-            //        TeamName = txtTakimEkleTakimAd.Text,
-            //        TeamColors = lstTakimEkleTakimRenkler,
-            //    });
-            //    context.SaveChanges();
-            //    Close();
-            //}
-
-
         }
     }
 }
